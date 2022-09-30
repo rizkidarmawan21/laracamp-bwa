@@ -20,6 +20,7 @@
 <body>
 
     @include('components.navbar')
+    {{-- @include('layouts.navigation') --}}
 
     @yield('content')
     <!-- Option 1: Bootstrap Bundle with Popper -->
