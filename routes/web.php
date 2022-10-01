@@ -30,10 +30,13 @@ Route::get('checkout/{camp:slug}', [CheckoutController::class, 'create'])->name(
 Route::post('checkout/{camp}', [CheckoutController::class, 'store'])->name('checkout.store')->middleware(['auth']);
 
 Route::get('dashboard',[DashboardController::class,'dashboard'])->name('dashboard')->middleware(['auth']);
+Route::get('dashboard/checkout/invoice/{checkout}',[CheckoutController::class,'invoice'])->name('user.checkout.invoice');
 
 // sosialite routes
 Route::get('sign-in-google', [UserController::class, 'google'])->name('user.login.google');
 Route::get('auth/google/callback', [UserController::class, 'handleProviderCallback'])->name('user.google.callback');
+
+
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
