@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\User\DashboardController as UserDashboard;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboard;
+use App\Http\Controllers\Admin\DiscountController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,9 +38,15 @@ Route::prefix('user/dashboard')->namespace('User')->middleware(['ensureUserRole:
 });
 
 // admin dashboard
-Route::prefix('admin/dashboard')->namespace('Admin')->name('admin.')->middleware(['ensureUserRole:admin', 'admin'])->group(function () {
+Route::prefix('admin/dashboard')->name('admin.')->middleware(['ensureUserRole:admin', 'admin'])->group(function () {
     Route::get('/', [AdminDashboard::class, 'index'])->name('dashboard');
     Route::post('checkout/{checkout}', [AdminDashboard::class, 'update'])->name('checkout.update');
+
+    // admin discount
+    // Route::get('discount',[DiscountController::class,'index'])->name('discount');
+    // Route::get('discount/create',[DiscountController::class,'create'])->name('discount.create');
+
+    Route::resource('discount',DiscountController::class);
 });
 
 
