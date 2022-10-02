@@ -1,0 +1,3 @@
+php artisan make:migration remove_card_number_and_expired_and_cvc_and_is_paid_in_checkouts_table --table=checkouts
+
+php artisan make:migration add_payment_status_and_midtrans_url_and_midtrans_booking_code_in_checkouts_table --table=checkouts
