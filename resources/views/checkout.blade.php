@@ -56,20 +56,12 @@
                                     <input type="text" name="occupation" class="form-control">
                                 </div>
                                 <div class="mb-4">
-                                    <label class="form-label">Card Number</label>
-                                    <input name="card_number" type="number" class="form-control">
+                                    <label class="form-label">Phone</label>
+                                    <input type="text" name="phone" class="form-control">
                                 </div>
-                                <div class="mb-5">
-                                    <div class="row">
-                                        <div class="col-lg-6 col-12">
-                                            <label class="form-label">Expired</label>
-                                            <input name="expired" type="month" class="form-control">
-                                        </div>
-                                        <div class="col-lg-6 col-12">
-                                            <label class="form-label">CVC</label>
-                                            <input type="number" name="cvc" class="form-control" maxlength="3">
-                                        </div>
-                                    </div>
+                                <div class="mb-4">
+                                    <label class="form-label">Address</label>
+                                    <input type="text" name="address" class="form-control">
                                 </div>
                                 <button type="submit" class="w-100 btn btn-primary">Pay Now</button>
                                 <p class="text-center subheader mt-4">
