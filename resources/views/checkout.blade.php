@@ -28,7 +28,6 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-lg-1 col-12"></div>
                         <div class="col-lg-6 col-12">
                             @if ($errors->any())
                                 <div class="alert alert-danger">
@@ -62,6 +61,10 @@
                                 <div class="mb-4">
                                     <label class="form-label">Address</label>
                                     <input type="text" name="address" class="form-control">
+                                </div>
+                                 <div class="mb-4">
+                                    <label class="form-label">Discount Code</label>
+                                    <input type="text" name="discount" class="form-control">
                                 </div>
                                 <button type="submit" class="w-100 btn btn-primary">Pay Now</button>
                                 <p class="text-center subheader mt-4">

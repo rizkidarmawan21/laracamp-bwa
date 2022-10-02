@@ -28,7 +28,15 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->user->name }}</td>
                                         <td>{{ $item->camp->title }}</td>
-                                        <td>$ {{ $item->camp->price }}</td>
+                                        <td>
+                                            <strong>Rp
+                                                {{ $item->total }}
+                                                @if ($item->discount_id)
+                                                    <span class="badge bg-success">Disc
+                                                        {{ $item->discount->percentage }}%</span>
+                                                @endif
+                                            </strong>
+                                        </td>
                                         <td>{{ $item->created_at }}</td>
                                         <td>
                                             <strong>{{ $item->payment_status }}</strong>
